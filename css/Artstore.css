@@ -9,15 +9,15 @@ header{
 }
 
 .logo{
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 55px;
+    font-family: Oraqle Script,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
 
 .slogan{
-    margin-left: 30px;
+    margin-left: 50px;
     font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: oh wonder,'Times New Roman', Times, serif;
     color: white;
 }
 
@@ -53,16 +53,18 @@ header{
 /*推荐部分*/
 
 #recommand{
+    position: absolute;
     width:100%;
     height: 700px;
+    top:60px;
     overflow: hidden;
 }
 
 #recommand_inc{
-    line-height: 200%;
     position: absolute;
-    left: -500px;
-    top: 250px;
+    top: 200px;
+    left: -530px;
+    line-height: 200%;
     opacity: 0.6;
 }
 
@@ -70,14 +72,15 @@ header{
     padding: 20px 0 0 0;
     display: inline-block;
     width: 450px;
-    height: 300px;
+    height: 350px;
     float: left;
     margin: 0 125px 0 1025px;
     text-align: center;
-    background: #ffff99;
+    background: #F5FFFA;
 }
 
 #recommand_image{
+    position: absolute;
     width: 8000px;
 }
 
@@ -104,8 +107,8 @@ header{
 
 .ref_num{
     position: absolute;
-    left: 580px;
-    top: 700px;
+    left: 600px;
+    top: 650px;
     font-size: 30px;
     width: 35px;
     height: 35px;
@@ -113,8 +116,7 @@ header{
     box-shadow: 0 0 8px 2px black;
     text-align: center;
     color: white;
-    opacity: 0.5;
-    z-index: 2;
+    z-index: 10;
 }
 
 .ref_num:nth-child(2){margin-left: 50px;}
@@ -182,9 +184,34 @@ h1 {
     font-size: 22px;
 }
 
+.details_rec{
+    margin: 20px auto;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #ccffff;
+}
+
+.details_rec:hover{
+    background-color: skyblue;
+}
+
+.details_rec a:link{
+    font-family: consolas;
+    text-decoration: none;
+    color: black;
+}
+
+.details_rec a:visited{
+    color: black;
+}
+
+
 /*三张照片部分*/
 
 main{
+    position: absolute;
+    top:760px;
     width: 100%;
     height: 700px;
 }
@@ -207,8 +234,8 @@ figure:focus{
 figcaption{
     text-align: center;
     display: block;
-    font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
     width: 270px;
     height: 350px;
     white-space: pre-line;
@@ -252,6 +279,8 @@ figcaption{
 /*尾部*/
 
 footer{
+    position: absolute;
+    top: 1460px;
     width: 100%;
     height: 30px;
     background-color: #171a21;
