@@ -241,6 +241,11 @@ figcaption{
     white-space: pre-line;
 }
 
+figcaption h2{
+    font-family: whisper,sans-serif;
+    font-size: 25px;
+}
+
 .main_image{
     width: 270px;
     height: 270px;
@@ -287,7 +292,7 @@ footer{
 }
 
 footer .copyright{
-    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  consolas,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: white;   
     text-align: center;
