@@ -1,0 +1,210 @@
+/*导航栏*/
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #171a21;
+    font-size: 120%;
+}
+
+.logo{
+    font-size: 80px;
+    font-family: Oraqle Script,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.slogan{
+    margin-left: 50px;
+    font-size: 30px;
+    font-family: oh wonder,'Times New Roman', Times, serif;
+    color: white;
+}
+
+.head_option{
+    list-style: none;
+    float: right;
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.head_option li{
+    margin-top: 10px;
+    display: inline-block;
+    width: 80px;
+    padding-top: 10px;
+    padding-left: 40px; 
+    color: white;
+}
+
+.head_option a:link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.head_option a:visited{
+    color: white;
+}
+
+.search{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+#search_dialog{
+    height: 16px;
+}
+
+#search_button{
+    height: 20px;
+    width: 20px;
+    background-color: antiquewhite;
+    background-image: url("../images/icon/search.png");
+    vertical-align: bottom;
+}
+
+.nav2back{
+    width: 100%;
+    height: 30px;
+    background-color: gainsboro;
+    border-bottom: 1px solid purple;
+}
+
+.nav2 li{
+    margin-top: 3px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif; 
+    width: 150px;
+    text-align: center;
+}
+
+.nav2 a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.nav2 a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+/*主体部分*/
+
+section{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.name h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.name p{
+    font-size: 25px;
+    font-family: Lucida Handwriting,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.name a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.name a:visited{
+    color: black;
+}
+
+.show_image{
+    width: 30%;
+    float: left;
+}
+
+.intro{
+    width: 45%;
+    float: left;
+}
+
+#price{
+    font-size: 30px;
+    color: red;
+}
+
+.content p{
+    font-family: consolas,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.content table{
+    margin-top: 30px;
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid linen;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content table thead{
+    background-color: skyblue;
+}
+
+.content table tbody th{
+    border: 2px solid linen;
+    border-right: transparent;
+}
+
+.content table td{
+    border: 2px solid linen;
+    border-left: transparent;
+}
+
+.content table tr{
+    height: 35px;
+}
+
+.content button{
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 40px;
+    font-size: 15px;
+    background-color: skyblue;
+    box-shadow: 0 0 8px 2px wheat;
+}
+
+/*侧边栏*/
+
+aside{
+    width: 20%;
+    float: right;
+}
+
+aside table{
+    margin-top: 10px;
+    width: 90%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: whisper,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+aside table th{
+    border: 2px solid skyblue;
+    background-color: skyblue;
+    height: 40px;
+    vertical-align: middle;
+}
+
+aside table tr td{
+    border: 2px solid skyblue;
+    height: 30px;
+}
+

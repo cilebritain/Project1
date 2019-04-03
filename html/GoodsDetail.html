@@ -3,17 +3,155 @@
     <head>
         <meta charset="UTF-8">
         <title>Goods Detail</title>
+        <link href="../css/reset.css" rel="stylesheet" type="text/css">
+        <link href="../css/GoodsDetail.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <nav>
-
-        </nav>
-
+        <header>
+            <nav id="logo&solgan">
+                <ul class="head_option">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">注册</a></li> <!--注册JS待填-->
+                    <li><a href="#">登录</a></li> <!--登录JS待填-->
+                </ul>
+            </nav>
+                <!--
+                <ul class="head_option_after_login">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li> <!--商品详情HTML待填
+                    <li><a href="UserInformation.html">dyc</a></li> <!--用户信息HTML待填
+                    <li><a href="#">登出</a></li> <!--登出JS待填
+                    <li><a href="SearchGoods.html">搜索</a></li> <!--搜索HTML待填
+                </ul> 
+                -->
+        </header>  
+        
+        <div>  
+            <span class="logo">Art Store</span>
+            <div class="search">
+                <input id="search_dialog" type="text" placeholder="搜索">
+                <button id="search_button" type="button" onclick="SearchGoods"></button>
+            </div>
+        </div>
+        
+        <div class="nav2back">
+            <nav class="nav2">
+                <ul>
+                    <li><a href="Artstore.html">首页</a></li>
+                    <li><a href="SearchGoods.html">搜索</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                </ul>
+            </nav>
+        </div>
+        
         <main>
-            <div>
-                <h1>Sunflowers</h1>
-                <p>By Van Gogh</p>
-            </div>    
+            <section>
+                <div class="name">
+                    <h1>Sunflowers</h1>
+                    <p>By <a href="SearchGoods.html" onclick="SearchGoods()"><span class="artist">Van Gogh</span></a></p>
+                </div>    
+
+                <div class="show_image">
+                    <div id="div1">
+                        <img id="img1" src="../images/works/medium/019050.jpg">
+                        <span></span>
+                        <div class="show"></div>
+                    </div>
+                    
+                    <div id="div2">
+                        <img id="img2" src="../images/works/medium/019050.jpg">
+                    </div>
+                </div>
+
+                <div class="intro">
+                    <div class="content">
+                        
+                        <p>This painting depicts the flowers lying on the ground, 
+                            while the second set, executed a year later in Arles, 
+                            shows a bouquet of sunflowers in a vase.</p>
+                        <p>Price:<span id="price">10,000$</span></p>
+                        
+                        <p>
+                            <button type="button" onclick="add_shoppingcart()"><img src="../images/icon/star.png">Add to wish list</button>
+                            <button type="button" onclick="add_shoppingcart()"><img src="../images/icon/cart.png">Add to shopping cart</button>
+                        </p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Product Details</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <th>Date:</th>
+                                <td>1888</td>
+                            </tr>
+                            <tr>
+                                <th>Medium</th>
+                                <td>Oil on canvas</td>
+                            </tr>
+                            <tr>
+                                <th>Dimetions:</th>
+                                <td>93cm * 72cm</td>
+                            </tr>
+                            <tr>
+                                <th>Museum:</th>
+                                <td>Neue Pinakothek Museum</td>
+                            </tr>
+                            <tr>
+                                <th>Genres:</th>
+                                <td>Post-Impressionism</td>
+                            </tr>
+                            <tr>
+                                <th>Degree of Heat</th>
+                                <td>100</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                
+                <table>
+                    <thead>
+                        <tr><th>流行艺术家</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>da Vinci</td></tr>
+                        <tr><td>Pablo Picasso</td></tr>
+                        <tr><td>Salvador Dali</td></tr>
+                        <tr><td>Millet</td></tr>
+                        <tr><td>Renoir</td></tr>
+                        <tr><td>Matisse</td></tr>
+                        <tr><td>Mornet</td></tr>
+                    </tbody>
+                </table>
+                
+                <table>
+                    <thead>
+                        <tr><th>流行流派</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Classic</td>
+                        </tr>
+                        <tr>
+                            <td>Realism</td>
+                        </tr>
+                        <tr>
+                            <td>Impression</td>
+                        </tr>
+                        <tr>
+                            <td>Cubuim</td>
+                        </tr>
+                        <tr>
+                            <td>Abstract</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </aside>
         </main>
+
     </body>
 </html>
