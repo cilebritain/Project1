@@ -2,7 +2,145 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>SearchGoods</title>
+        <title>Profile</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/Profile.css" rel="stylesheet" type="text/css">
     </head>
+
+    <body>
+        <header>
+            <nav id="logo&solgan">
+                <ul class="head_option">
+                    <li><a href="Artstore.html">首页</a></li>
+                    <li><a href="#">注册</a></li> <!--注册JS待填-->
+                    <li><a href="#">登录</a></li> <!--登录JS待填-->
+                </ul>
+            </nav>
+                <!--
+                <ul class="head_option_after_login">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li> <!--商品详情HTML待填
+                    <li><a href="UserInformation.html">dyc</a></li> <!--用户信息HTML待填
+                    <li><a href="#">登出</a></li> <!--登出JS待填
+                    <li><a href="SearchGoods.html">搜索</a></li> <!--搜索HTML待填
+                </ul> 
+                -->
+        </header>  
+        
+        <div>  
+            <span class="logo">Art Store</span>
+            <div class="search">
+                <input id="search_dialog" type="text" placeholder="搜索">
+                <button id="search_button" type="button" onclick="SearchGoods()"><a href="SearchGoods.html"></a></button>
+            </div>
+        </div>
+        
+        <div class="nav2back">
+            <nav class="nav2">
+                <ul>
+                    <li><a href="Artstore.html">首页</a></li>
+                    <li><a href="SearchGoods.html">搜索</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                    <li><a href="#">发布艺术品</a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>   
+
+    <div class="Userinfo" id="afterlog_info">
+        <img src="../images/artists/square-medium/73.jpg">
+        <p>User name：cilebritain</p>
+        <p>Tell: 12345678900</p>
+        <p>Mail: cilebritain@foxmail.com</p>
+        <p>Adresss: songhuajiangroad 2500</p>
+        <p>Balance: 10,000,000$</p>
+        <button type="button" onclick="showRecharge()">Recharge</button>
+    </div>
+
+    <div class="Userinfo" id="beforelog_info">
+        <img src="../images/artists/square-medium/73.jpg">
+        <p>User name:</p>
+        <p>Tell:</p>
+        <p>Mail:</p>
+        <p>Adresss:</p>
+        <p>Balance:</p>
+        <button type="button" onclick="unlogAlert()">Recharge</button>
+    </div>
+
+    <main>
+        <div class="Upload" id="afterlog_upload">
+            <h1>我上传的艺术品</h1>
+            <table>
+                <tr>
+                    <td>上传时间：2018/10/9</td>
+                    <td>作品名称：Peppa Pig</td>
+                    <td>作者：Van Gogh</td>
+                    <td>
+                        描述：Peppa Pig is a British preschool animated television series 
+                        directed and produced by Astley Baker Davies 
+                        in association with Entertainment One, 
+                        which originally aired on 31 May 2004.
+                    </td>
+                </tr>
+                <tr>
+                    <td>上传时间：2018/12/18</td>
+                    <td>作品名称：White Album2</td>
+                    <td>作者：da Vinci</td>
+                    <td>
+                        描述：The story of Introductory Chapter begins around the second half of October with Haruki Kitahara 
+                        and Takeya Iizuka troubled over the fact that all the band members they gathered for the school festival have left.
+                        After a bit of hard work, Setsuna Ogiso and Kazusa Touma are recruited into the club. 
+                        With Haruki, the three of them play together at the school festival.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="Upload" id=beforelog_upload">
+            <h1>我上传的艺术品</h1>
+        </div>
+
+        <div class="Buy" id="afterlog_buy">
+            <h1>我购买的艺术品：</h1>
+            <table class="buy">
+                <tr>
+                    <td>订单编号：2023697797</td>
+                    <td>订单名称：Mona Lisa</td>
+                    <td>订单时间：2019/4/4</td>
+                    <td>订单金额：10,000,000$</td>
+                </tr>
+                <tr>
+                    <td>订单编号：3129399956</td>
+                    <td>订单名称：Sunflowers</td>
+                    <td>订单时间：2018/12/13</td>
+                    <td>订单金额：9,000,000$</td>
+                </tr>
+            </table>
+        </div>
+        <div class="Buy" id="afterlog_buy">
+            <h1>我购买的艺术品：</h1>
+        </div>
+
+        <div class="sell" id="afterlog_sell">
+            <h1>我卖出的艺术品：</h1>
+            <table class="sell">
+                <tr>
+                    <td>订单编号：233333333</td>
+                    <td>商品名称：The Starry Night</td>
+                    <td>订单时间：2018/6/8</td>
+                    <td>订单金额：20$</td>
+                </tr>
+            </table>
+        </div>
+        <div class="sell" id="beforelog_sell">
+            <h1>我卖出的艺术品：</h1>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>copyright © 2019 Art Store. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/Profile.js"></script>
+</html>    

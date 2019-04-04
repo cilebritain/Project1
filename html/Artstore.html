@@ -14,24 +14,21 @@
             <span class="slogan">Find Things Beautiful</span>
             <ul class="head_option">
                 <li><a href="#">首页</a></li>
-                <li><a href="GoodsDetail.html">商品详情</a></li> <!--商品详情HTML待填-->
-                <li><a href="#">注册</a></li> <!--注册JS待填-->
-                <li><a href="#">登录</a></li> <!--登录JS待填-->
-                <li><a href="SearchGoods.html">搜索</a></li> <!--搜索HTML待填-->
+                <li><a href="GoodsDetail.html">商品详情</a></li>
+                <li><a href="javascript:void(0)" onclick="register()">注册</a></li> <!--注册JS待填-->
+                <li><a href="javascript:void(0)" onclick="login();change();">登录</a></li> 
+                <li><a href="SearchGoods.html">搜索</a></li>
             </ul>
         </nav>
-            <!--
             <ul class="head_option_after_login">
                 <li><a href="#">首页</a></li>
-                <li><a href="GoodsDetail.html">商品详情</a></li> <!--商品详情HTML待填
-                <li><a href="UserInformation.html">dyc</a></li> <!--用户信息HTML待填
-                <li><a href="#">登出</a></li> <!--登出JS待填
-                <li><a href="SearchGoods.html">搜索</a></li> <!--搜索HTML待填
-            </ul> 
-            -->
+                <li><a href="GoodsDetail.html">商品详情</a></li>
+                <li><a href="Profile.html">cilebritain</a></li>
+                <li><a href="javascript:void(0)" onclick="logout()">登出</a></li> 
+                <li><a href="SearchGoods.html">搜索</a></li>
+            </ul>
     </header>
 
-    <!--好像时机还不成熟
     <div id="login_dialog">
         <h1>登录</h1>
         <form id="login" method="POST">
@@ -51,22 +48,22 @@
                 <tr>
                     <th>验证码</th>
                     <td>
-                        <input type="text" id="Verification_code">
-                        <!--验证码更换JS待填
+                        <input type="text" id="Verification_input">
+                        <div id="vertification_code" onclick="change_ver()">
+                            <a href="#">点击刷新验证码</a>
+                        </div>
                     </td>
                 </tr>
+
                 <tr>
                     <td colspan="2">
-                        <!--
                         <input type="button" id="login_button" value="登录" onclick="login()">
-                        <button type="button" onclick="cancle_login" class="close">关闭</button>
-                        登录JS部分待填
+                        <button type="button" onclick="cancle_login()" class="close">关闭</button>                    
                     </td>
                 </tr>
             </table>
         </form>
     </div>
-    -->
     
     <div id="recommand">
         <a id="ref1" class="ref_num">1</a>

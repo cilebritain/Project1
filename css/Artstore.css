@@ -39,6 +39,8 @@ header{
 }
 
 .head_option a:link {
+    height: 25px;
+    width: 80px;
     text-decoration: none;
     color: white;
     display: block;
@@ -48,6 +50,10 @@ header{
 
 .head_option a:visited{
     color: white;
+}
+
+.head_option a:hover{
+    background-color: wheat;
 }
 
 /*推荐部分*/
