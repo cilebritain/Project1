@@ -97,5 +97,127 @@ header{
     text-decoration: none;
 }
 
+#logo_slogan1{
+    display: none;
+}
+
 /*用户界面*/
 
+#afterlog_upload{
+    display: none;
+}
+
+#afterlog_buy{
+    display: none;
+}
+
+#afterlog_sell{
+    display: none;
+}
+
+#afterlog_info{
+    display: none;
+}
+
+.Userinfo{
+    float: left;
+    height: 400px;
+    width: 350px;
+    background-color: skyblue;
+    font-size: 20px;
+    line-height: 150%;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 3px solid pink;
+}
+
+.Userinfo img{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.Userinfo button{
+    margin-left: 200px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.Upload{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 300px;
+    width: 70%;
+    background-color: #DBFF33;
+    border: 3px solid pink;
+}
+
+.Upload h1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+}
+
+.Buy{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 300px;
+    width: 70%;
+    background-color: #75FF33;
+    border: 3px solid pink;
+}
+
+.Buy h1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+}
+
+.sell{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 300px;
+    width: 70%;
+    background-color: #33FFBD;
+    border: 3px solid pink;
+}
+
+.sell h1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+}
+
+main table{
+    margin-top: 10px;
+}
+
+main table th{
+    padding: 20px;
+}
+
+main table td{
+    padding: 20px;
+}
+
+/*尾部*/
+
+footer{
+    position: absolute;
+    top: 1160px;
+    width: 100%;
+    height: 30px;
+    background-color: #171a21;
+}
+
+footer .copyright{
+    font-family:  consolas,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: white;   
+    text-align: center;
+}

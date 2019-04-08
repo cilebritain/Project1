@@ -29,10 +29,19 @@ function click_register(){
 
     if(succeed){
         document.cookie="username=cilebritain123";
-        document.getElementById('logo_slogan').style.display='none';
-        document.getElementById('logo_slogan1').style.display='block';
         document.getElementById('register_dialog').style.display='none';
         document.getElementById('register2').style.display='none';
+        document.getElementById('logo_slogan').style.display='none';
+        document.getElementById('logo_slogan1').style.display='block';
+ 
+        document.getElementById('afterlog_info').style.display='block';
+        document.getElementById('beforelog_info').style.display='none';
+        document.getElementById('afterlog_upload').style.display='block';
+        document.getElementById('beforelog_upload').style.display='none';
+        document.getElementById('afterlog_buy').style.display='block';
+        document.getElementById('beforelog_buy').style.display='none';
+        document.getElementById('afterlog_sell').style.display='block';
+        document.getElementById('beforelog_sell').style.display='none';        
     }
 
 }

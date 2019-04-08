@@ -1,11 +1,3 @@
-function SearchGoods(){
-    if(document.getElementsById("search_dialog").value==""){
-        document.getElementById("a").setAttribute("href","Search_none.html");
-    }else{
-        document.getElementById("a").setAttribute("href","SearchGoods.html");
-    }
-}
-
 function unlogAlert(){
     alert("请登录！");
 }
