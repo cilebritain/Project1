@@ -49,6 +49,10 @@ header{
     color: white;
 }
 
+#logo_slogan1{
+    display: none;
+}
+
 .search{
     float: right;
     margin-top: 30px;

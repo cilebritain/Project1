@@ -4,206 +4,256 @@
         <meta charset="UTF-8">
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/Artstore.css" rel="stylesheet" type="text/css">
+        <link href="../css/login&register.css" rel="stylesheet" type="text/css">
         <title>Art store</title>
     </head>
-</html>
-<body>
-    <header>
-        <nav id="logo&solgan">
-            <span class="logo">Art Store</span>
-            <span class="slogan">Find Things Beautiful</span>
-            <ul class="head_option">
-                <li><a href="#">首页</a></li>
-                <li><a href="GoodsDetail.html">商品详情</a></li>
-                <li><a href="javascript:void(0)" onclick="register()">注册</a></li> <!--注册JS待填-->
-                <li><a href="javascript:void(0)" onclick="login();change();">登录</a></li> 
-                <li><a href="SearchGoods.html">搜索</a></li>
-            </ul>
-        </nav>
-            <ul class="head_option_after_login">
-                <li><a href="#">首页</a></li>
-                <li><a href="GoodsDetail.html">商品详情</a></li>
-                <li><a href="Profile.html">cilebritain</a></li>
-                <li><a href="javascript:void(0)" onclick="logout()">登出</a></li> 
-                <li><a href="SearchGoods.html">搜索</a></li>
-            </ul>
-    </header>
+    <body>
+        <header>
+            <nav id="logo_slogan">
+                <span class="logo">Art Store</span>
+                <span class="slogan">Find Things Beautiful</span>
+                <ul class="head_option">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                    <li><a href="javascript:void(0)" onclick="register()">注册</a></li>
+                    <li><a href="javascript:void(0)" onclick="login();change_ver()">登录</a></li> 
+                    <li><a href="SearchGoods.html">搜索</a></li>
+                </ul>
+            </nav>
+            <nav id="logo_slogan1">
+                <span class="logo">Art Store</span>
+                <span class="slogan">Find Things Beautiful</span>
+                <ul class="head_option">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                    <li><a href="Profile.html">cilebritain123</a></li>
+                    <li><a href="javascript:void(0)" onclick="logout()">登出</a></li> 
+                    <li><a href="SearchGoods.html">搜索</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div id="login_dialog">
-        <h1>登录</h1>
-        <form id="login" method="POST">
-            <table>
-                <tr>
-                    <th>用户名：</th>
-                    <td>
-                        <input type="text" id="username" placeholder="用户名">
-                    </td>
-                </tr>
-                <tr>
-                    <th>密码：</th>
-                    <td>
-                        <input type="password" id="user_password" placeholder="密码">
-                    </td>
-                </tr>
-                <tr>
-                    <th>验证码</th>
-                    <td>
-                        <input type="text" id="Verification_input">
-                        <div id="vertification_code" onclick="change_ver()">
-                            <a href="#">点击刷新验证码</a>
-                        </div>
-                    </td>
-                </tr>
+        <div id="login_dialog" class="whiteboard">
+            <h1>登录</h1>
+            <form id="login" method="POST">
+                <table>
+                    <tr>
+                        <th>用户名：</th>
+                        <td>
+                            <input type="text" id="username" placeholder="用户名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密码：</th>
+                        <td>
+                            <input type="password" id="password" placeholder="密码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>验证码</th>
+                        <td>
+                            <input type="text" id="vertification_input">
+                            <div id="vertification_code" onclick="change_ver()">
+                                <a href="#">点击刷新验证码</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="login_button" value="登录" onclick="click_login()">
+                            <button type="button" onclick="cancel_login()" class="close">关闭</button>                    
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
 
-                <tr>
-                    <td colspan="2">
-                        <input type="button" id="login_button" value="登录" onclick="login()">
-                        <button type="button" onclick="cancle_login()" class="close">关闭</button>                    
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    
-    <div id="recommand">
-        <a id="ref1" class="ref_num">1</a>
-        <a id="ref2" class="ref_num">2</a>
-        <a id="ref3" class="ref_num">3</a>
-        <a id="ref4" class="ref_num">4</a>
-        <a id="ref5" class="ref_num">5</a>
-        <div id="recommand_image" class="animation">
+        <div id="login2" class="blackboard"></div>
 
-            <!--首页的五张照片 利用animation实现变换-->
-            <img src="../images/works/large/137030.jpg">
-            <img src="../images/works/large/139010.jpg">
-            <img src="../images/works/large/019150.jpg">
-            <img src="../images/works/large/104020.jpg">
-            <img src="../images/works/large/131020.jpg">
+        <div id="register_dialog" class="whiteboard">
+            <h1>注册</h1>
+            <form id="register" method="POST">
+                <table>
+                    <tr>
+                        <th>用户名：(至少六位，不能为纯数字或字母）</th>
+                        <td>
+                            <input type="text" id="username2" placeholder="用户名" onblur="check_username_now()">
+                            <label for="username2" id="name_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密码：（至少六位，不能与用户名相同）</th>
+                        <td>
+                            <input type="password" id="password2" placeholder="密码" onblur="check_password_now()">
+                            <label for="password2" id="password_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>确认密码：</th>
+                        <td>
+                            <input type="password" id="check_password" placeholder="确认密码" onblur="check_password_now2()">
+                            <label for="check_password" id="check_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>邮箱：</th>
+                        <td>
+                            <input type="text" id="email" placeholder="邮箱" onblur="check_email_now()">
+                            <label for="email" id="email_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="submit" value="提交" onclick="click_register()">
+                            <input type="button" value="关闭" onclick="cancle_register()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
 
-            <ul id="recommand_inc">
+        <div id="register2" class="blackboard"></div>
+        
+        <div id="recommand">
+            <a id="ref1" class="ref_num">1</a>
+            <a id="ref2" class="ref_num">2</a>
+            <a id="ref3" class="ref_num">3</a>
+            <a id="ref4" class="ref_num">4</a>
+            <a id="ref5" class="ref_num">5</a>
+            <div id="recommand_image" class="animation">
 
-                <li>
-                    <h1>Moonrise over the Sea</h1>
-                    <p class="author">Caspar David Friedrich</p>
-                    <p class="image_inc">
-                        Three young people, two women side by side and a man further back, 
-                        are sitting on a large boulder by the sea, 
-                        silhouetted against the sky as they watch the moon rising to the east above a band of clouds. 
-                    </p>
-                    <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
-                </li>
-            
-                <li>
-                    <h1>The Lady of Shalott</h1>
-                    <p class="author">John William Waterhouse</p>
-                    <p class="image_inc">
-                        The painting has the precisely painted detail and bright colours associated with the Pre-Raphaelites.
-                        The Lady of Shalott pictures the Lady, who is the main character in Tennyson's poem, 
-                        also titled The Lady of Shalott (1842), who is facing her destiny. 
-                        The Lady has made her way to this small boat with a few of her belongings.
-                    </p>
-                    <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
-                </li>
-                    
-                <li>
-                    <h1>Almond Blossoms</h1>
-                    <p class="author">Vincent van Gogh</p>
-                    <p class="image_inc">
-                        "In his flowering trees, Vincent attained a sense of spontaneity, 
-                        freeing himself from the strict self-analytical approach he took in Paris. 
-                        In Almond Tree in Blossom, Vincent used the light, broken strokes of impressionism and the dabs of colour of divisionism for a sparkling surface effect. 
-                    </p>
-                    <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
-                </li>
+                <!--首页的五张照片 利用animation实现变换-->
+                <img src="../images/works/large/137030.jpg">
+                <img src="../images/works/large/139010.jpg">
+                <img src="../images/works/large/019150.jpg">
+                <img src="../images/works/large/104020.jpg">
+                <img src="../images/works/large/131020.jpg">
 
-                <li>
-                    <h1>The Surrender of Breda</h1>
-                    <p class="author"> Diego Velázquez</p>
-                    <p class="image_inc">
-                        The extraordinary respect and dignity Spinola demonstrated towards the Dutch army is praised through The Surrender of Breda. 
-                        Spinola “had forbidden his troops to jeer at, or otherwise abuse the vanquished Dutch, and, according to a contemporary report.                    
-                    </p>
-                    <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
-                </li>    
+                <ul id="recommand_inc">
 
-                <li>
-                    <h1>The Piazza San Marco in Venice</h1>
-                    <p class="author"> Canaletto</p>
-                    <p class="image_inc">
-                        This early work, which nonetheless displays the most outstanding features of his style, 
-                        depicts the most famous square in Venice from a high viewpoint, thus ensuring a broader frame for the composition.                        
-                    </p>
-                    <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
-                </li>    
+                    <li>
+                        <h1>Moonrise over the Sea</h1>
+                        <p class="author">Caspar David Friedrich</p>
+                        <p class="image_inc">
+                            Three young people, two women side by side and a man further back, 
+                            are sitting on a large boulder by the sea, 
+                            silhouetted against the sky as they watch the moon rising to the east above a band of clouds. 
+                        </p>
+                        <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
+                    </li>
                 
-            </ul>
+                    <li>
+                        <h1>The Lady of Shalott</h1>
+                        <p class="author">John William Waterhouse</p>
+                        <p class="image_inc">
+                            The painting has the precisely painted detail and bright colours associated with the Pre-Raphaelites.
+                            The Lady of Shalott pictures the Lady, who is the main character in Tennyson's poem, 
+                            also titled The Lady of Shalott (1842), who is facing her destiny. 
+                            The Lady has made her way to this small boat with a few of her belongings.
+                        </p>
+                        <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
+                    </li>
+                        
+                    <li>
+                        <h1>Almond Blossoms</h1>
+                        <p class="author">Vincent van Gogh</p>
+                        <p class="image_inc">
+                            "In his flowering trees, Vincent attained a sense of spontaneity, 
+                            freeing himself from the strict self-analytical approach he took in Paris. 
+                            In Almond Tree in Blossom, Vincent used the light, broken strokes of impressionism and the dabs of colour of divisionism for a sparkling surface effect. 
+                        </p>
+                        <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
+                    </li>
+
+                    <li>
+                        <h1>The Surrender of Breda</h1>
+                        <p class="author"> Diego Velázquez</p>
+                        <p class="image_inc">
+                            The extraordinary respect and dignity Spinola demonstrated towards the Dutch army is praised through The Surrender of Breda. 
+                            Spinola “had forbidden his troops to jeer at, or otherwise abuse the vanquished Dutch, and, according to a contemporary report.                    
+                        </p>
+                        <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
+                    </li>    
+
+                    <li>
+                        <h1>The Piazza San Marco in Venice</h1>
+                        <p class="author"> Canaletto</p>
+                        <p class="image_inc">
+                            This early work, which nonetheless displays the most outstanding features of his style, 
+                            depicts the most famous square in Venice from a high viewpoint, thus ensuring a broader frame for the composition.                        
+                        </p>
+                        <p class="details_rec"><a href="GoodsDetail.html">View Details</a></p>
+                    </li>    
+                    
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <main>
-            <figure tabindex="1">
-                <a href="GoodsDetail.html">
-                    <img src="../images/works/square-medium/005050.jpg" alt="跨越阿尔卑斯山圣伯纳隘道的拿破仑" class="main_image">
-                </a>
-                <figcaption>
-                    <h2>Napoleon Crossing the Alps</h2>
-                    <p>
-                        Bonaparte’s gloveless right hand points up towards the invisible summit, 
-                        more for us to follow, one feels, than the soldiers in the distance. 
-                        Raised arms are often found in David’s work, 
-                        though this one is physically connected with the setting, 
-                        echoing the slope of the mountain ridge. 
-                        Together with the line of his cloak, 
-                        these create a series of diagonals that are counterbalanced by the clouds to the right. 
-                        The overall effect is to stabilise the figure of Napoleon.
-                    </p>
-                </figcaption>
-                <p class="details"><a href="GoodsDetail.html">View Details</a></p>
-            </figure>
+        <main>
+                <figure tabindex="1">
+                    <a href="GoodsDetail.html">
+                        <img src="../images/works/square-medium/005050.jpg" alt="跨越阿尔卑斯山圣伯纳隘道的拿破仑" class="main_image">
+                    </a>
+                    <figcaption>
+                        <h2>Napoleon Crossing the Alps</h2>
+                        <p>
+                            Bonaparte’s gloveless right hand points up towards the invisible summit, 
+                            more for us to follow, one feels, than the soldiers in the distance. 
+                            Raised arms are often found in David’s work, 
+                            though this one is physically connected with the setting, 
+                            echoing the slope of the mountain ridge. 
+                            Together with the line of his cloak, 
+                            these create a series of diagonals that are counterbalanced by the clouds to the right. 
+                            The overall effect is to stabilise the figure of Napoleon.
+                        </p>
+                    </figcaption>
+                    <p class="details"><a href="GoodsDetail.html">View Details</a></p>
+                </figure>
 
-            <figure tabindex="2">
-                <a href="GoodsDetail.html">
-                    <img src="../images/works/square-medium/019070.jpg" alt="星空" class="main_image">
-                </a>
-                <figcaption>
-                    <h2>The Starry Night</h2>
-                    <p>
-                        "This morning I saw the country from my window a long time before sunrise, 
-                        with nothing but the morning star, which looked very big," 
-                        van Gogh wrote to his brother Theo, from France. 
-                        Rooted in imagination and memory, The Starry Night embodies an inner, 
-                        subjective expression of van Gogh's response to nature. 
-                        In thick, sweeping brushstrokes, a flamelike cypress unites the churning sky and the quiet village below.
-                        The village was partly invented, and the church spire evokes van Gogh's native land, 
-                        the Netherlands.                        
-                    </p>
-                </figcaption>
-                <p class="details"><a href="GoodsDetail.html">View Details</a></p>
-            </figure>
-            
-            <figure tabindex="3">
-                <a href="GoodsDetail.html">
-                    <img src="../images/works/square-medium/097050.jpg" alt="蒙娜丽莎" class="main_image">
-                </a>
-                <figcaption>
-                    <h2>Mona Lisa</h2>
-                    <p>
-                        The painting was one of the first portraits to depict the sitter in front of an imaginary landscape, 
-                        and Leonardo was one of the first painters to use aerial perspective.
-                        The enigmatic woman is portrayed seated in what appears to be an open loggia with dark pillar bases on either side.
-                        Winding paths and a distant bridge give only the slightest indications of human presence. 
-                        Leonardo has chosen to place the horizon line not at the neck, 
-                        thus linking the figure with the landscape and emphasizing the mysterious nature of the painting.
-                    </p>
-                </figcaption>
-                <p class="details"><a href="GoodsDetail.html">View Details</a></p>
-            </figure>
-    </main>
-
-    <footer>
-        <div class="copyright">
-            <p>copyright © 2019 Art Store. All rights reserved</p>
-        </div>
-    </footer>
-
-</body>
+                <figure tabindex="2">
+                    <a href="GoodsDetail.html">
+                        <img src="../images/works/square-medium/019070.jpg" alt="星空" class="main_image">
+                    </a>
+                    <figcaption>
+                        <h2>The Starry Night</h2>
+                        <p>
+                            "This morning I saw the country from my window a long time before sunrise, 
+                            with nothing but the morning star, which looked very big," 
+                            van Gogh wrote to his brother Theo, from France. 
+                            Rooted in imagination and memory, The Starry Night embodies an inner, 
+                            subjective expression of van Gogh's response to nature. 
+                            In thick, sweeping brushstrokes, a flamelike cypress unites the churning sky and the quiet village below.
+                            The village was partly invented, and the church spire evokes van Gogh's native land, 
+                            the Netherlands.                        
+                        </p>
+                    </figcaption>
+                    <p class="details"><a href="GoodsDetail.html">View Details</a></p>
+                </figure>
+                
+                <figure tabindex="3">
+                    <a href="GoodsDetail.html">
+                        <img src="../images/works/square-medium/097050.jpg" alt="蒙娜丽莎" class="main_image">
+                    </a>
+                    <figcaption>
+                        <h2>Mona Lisa</h2>
+                        <p>
+                            The painting was one of the first portraits to depict the sitter in front of an imaginary landscape, 
+                            and Leonardo was one of the first painters to use aerial perspective.
+                            The enigmatic woman is portrayed seated in what appears to be an open loggia with dark pillar bases on either side.
+                            Winding paths and a distant bridge give only the slightest indications of human presence. 
+                            Leonardo has chosen to place the horizon line not at the neck, 
+                            thus linking the figure with the landscape and emphasizing the mysterious nature of the painting.
+                        </p>
+                    </figcaption>
+                    <p class="details"><a href="GoodsDetail.html">View Details</a></p>
+                </figure>
+        </main>
+        <footer>
+            <div class="copyright">
+                <p>copyright © 2019 Art Store. All rights reserved</p>
+            </div>
+        </footer>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/register.js"></script>
+    </body>
+</html>

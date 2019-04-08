@@ -93,6 +93,10 @@ header{
     text-decoration: none;
 }
 
+#logo_slogan1{
+    display: none;
+}
+
 /*搜索部分*/
 
 main{

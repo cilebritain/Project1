@@ -56,6 +56,10 @@ header{
     background-color: wheat;
 }
 
+#logo_slogan1{
+    display: none;
+}
+
 /*推荐部分*/
 
 #recommand{

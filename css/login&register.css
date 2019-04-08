@@ -1,0 +1,57 @@
+.blackboard{
+    display: none;
+    position: fixed;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 101;
+    opacity: 0.4;
+}
+
+.whiteboard{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 3px solid blueviolet;
+    background-color: white;
+    z-index: 102;
+}
+
+table{
+    margin-left: 20px;
+    text-align: left;
+}
+
+.whiteboard h1{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+table th{
+    height: 40px;
+}
+
+table td{
+    height: 40px;
+}
+
+#vertification_code{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#login_button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#submit{
+    margin-left: 20px;
+    margin-right: 20px;
+}

@@ -5,27 +5,113 @@
         <title>SearchGoods</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/SearchGoods.css" rel="stylesheet" type="text/css">
+        <link href="../css/login&register.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
-        <header>
-            <nav id="logo&solgan">
+        <header>            
+            <nav id="logo_slogan">
+                <span class="logo">Art Store</span>
+                <span class="slogan">Find Things Beautiful</span>
                 <ul class="head_option">
-                    <li><a href="Artstore.html">首页</a></li>
-                    <li><a href="#">注册</a></li> <!--注册JS待填-->
-                    <li><a href="#">登录</a></li> <!--登录JS待填-->
+                    <li><a href="#">首页</a></li>
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                    <li><a href="javascript:void(0)" onclick="register()">注册</a></li>
+                    <li><a href="javascript:void(0)" onclick="login();change_ver()">登录</a></li> 
+                    <li><a href="SearchGoods.html">搜索</a></li>
                 </ul>
             </nav>
-                <!--
-                <ul class="head_option_after_login">
+            <nav id="logo_slogan1">
+                <span class="logo">Art Store</span>
+                <span class="slogan">Find Things Beautiful</span>
+                <ul class="head_option">
                     <li><a href="#">首页</a></li>
-                    <li><a href="GoodsDetail.html">商品详情</a></li> <!--商品详情HTML待填
-                    <li><a href="UserInformation.html">dyc</a></li> <!--用户信息HTML待填
-                    <li><a href="#">登出</a></li> <!--登出JS待填
-                    <li><a href="SearchGoods.html">搜索</a></li> <!--搜索HTML待填
-                </ul> 
-                -->
-        </header>  
+                    <li><a href="GoodsDetail.html">商品详情</a></li>
+                    <li><a href="Profile.html">cilebritain123</a></li>
+                    <li><a href="javascript:void(0)" onclick="logout()">登出</a></li> 
+                    <li><a href="SearchGoods.html">搜索</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="login_dialog" class="whiteboard">
+            <h1>登录</h1>
+            <form id="login" method="POST">
+                <table>
+                    <tr>
+                        <th>用户名：</th>
+                        <td>
+                            <input type="text" id="username" placeholder="用户名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密码：</th>
+                        <td>
+                            <input type="password" id="password" placeholder="密码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>验证码</th>
+                        <td>
+                            <input type="text" id="vertification_input">
+                            <div id="vertification_code" onclick="change_ver()">
+                                <a href="#">点击刷新验证码</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="login_button" value="登录" onclick="click_login()">
+                            <button type="button" onclick="cancel_login()" class="close">关闭</button>                    
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div id="login2" class="blackboard"></div>
+
+        <div id="register_dialog" class="whiteboard">
+            <h1>注册</h1>
+            <form id="register" method="POST">
+                <table>
+                    <tr>
+                        <th>用户名：(至少六位，不能为纯数字或字母）</th>
+                        <td>
+                            <input type="text" id="username2" placeholder="用户名" onblur="check_username_now()">
+                            <label for="username2" id="name_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密码：（至少六位，不能与用户名相同）</th>
+                        <td>
+                            <input type="password" id="password2" placeholder="密码" onblur="check_password_now()">
+                            <label for="password2" id="password_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>确认密码：</th>
+                        <td>
+                            <input type="password" id="check_password" placeholder="确认密码" onblur="check_password_now2()">
+                            <label for="check_password" id="check_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>邮箱：</th>
+                        <td>
+                            <input type="text" id="email" placeholder="邮箱" onblur="check_email_now()">
+                            <label for="email" id="email_label"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="submit" value="提交" onclick="click_register()">
+                            <input type="button" value="关闭" onclick="cancle_register()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div> 
         
         <div>  
             <span class="logo">Art Store</span>
@@ -252,5 +338,6 @@
             <p>copyright © 2019 Art Store. All rights reserved</p>
         </div>
     </footer>
-    
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/register.js"></script>
 </html>
