@@ -2,11 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Goods Detail</title>
+        <title>SearchGoods</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
-        <link href="../css/GoodsDetail.css" rel="stylesheet" type="text/css">
+        <link href="../css/SearchGoods.css" rel="stylesheet" type="text/css">
         <link href="../css/login&register.css" rel="stylesheet" type="text/css">
     </head>
+
     <body>
         <header>
             <nav id="logo_slogan">
@@ -33,7 +34,7 @@
                         <th>用户名：</th>
                         <td>
                             <input type="text" id="username" placeholder="用户名">
-                           </td>
+                            </td>
                     </tr>
                     <tr>
                         <th>密码：</th>
@@ -122,118 +123,46 @@
                 </ul>
             </nav>
         </div>
-        
-        <main>
-            <section>
-                <div class="name">
-                    <h1>Sunflowers</h1>
-                    <p>By <a href="SearchGoods.html" onclick="SearchGoods()"><span class="artist">Van Gogh</span></a></p>
-                </div>    
+    </body>   
 
-                <div class="show_image">
-                    <div id="div1">
-                        <img id="img1" src="../images/works/medium/019050.jpg">
-                        <span></span>
-                        <div class="show"></div>
-                    </div>
-                    
-                    <div id="div2">
-                        <img id="img2" src="../images/works/medium/019050.jpg">
-                    </div>
-                </div>
+    <main id="search_result">
 
-                <div class="intro">
-                    <div class="content">
-                        
-                        <p>This painting depicts the flowers lying on the ground, 
-                            while the second set, executed a year later in Arles, 
-                            shows a bouquet of sunflowers in a vase.</p>
-                        <p>Price:<span id="price">10,000$</span></p>
-                        
-                        <p>
-                            <button type="button" onclick="add_shoppingcart()"><img src="../images/icon/star.png">Add to wish list</button>
-                            <button type="button" onclick="add_shoppingcart()"><a href="Shoppingcart.html"><img src="../images/icon/cart.png">Add to shopping cart</a></button>
-                        </p>
+        <h1>Search Result</h1>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Product Details</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <th>Date:</th>
-                                <td>1888</td>
-                            </tr>
-                            <tr>
-                                <th>Medium</th>
-                                <td>Oil on canvas</td>
-                            </tr>
-                            <tr>
-                                <th>Dimetions:</th>
-                                <td>93cm * 72cm</td>
-                            </tr>
-                            <tr>
-                                <th>Museum:</th>
-                                <td>Neue Pinakothek Museum</td>
-                            </tr>
-                            <tr>
-                                <th>Genres:</th>
-                                <td>Post-Impressionism</td>
-                            </tr>
-                            <tr>
-                                <th>Degree of Heat</th>
-                                <td>100</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </section>
+        <div class="sort">
+            <span>Sort by：</span>
+            price<input type="radio" value="price">
+            heat<input type="radio" value="heat">
+            title<input type="radio" value="title">
+        </div>
 
-            <aside>
-                
-                <table>
-                    <thead>
-                        <tr><th>流行艺术家</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>da Vinci</td></tr>
-                        <tr><td>Pablo Picasso</td></tr>
-                        <tr><td>Salvador Dali</td></tr>
-                        <tr><td>Millet</td></tr>
-                        <tr><td>Renoir</td></tr>
-                        <tr><td>Matisse</td></tr>
-                        <tr><td>Mornet</td></tr>
-                    </tbody>
-                </table>
-                
-                <table>
-                    <thead>
-                        <tr><th>流行流派</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Classic</td>
-                        </tr>
-                        <tr>
-                            <td>Realism</td>
-                        </tr>
-                        <tr>
-                            <td>Impression</td>
-                        </tr>
-                        <tr>
-                            <td>Cubuim</td>
-                        </tr>
-                        <tr>
-                            <td>Abstract</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </aside>
-        </main>
-    </body>
+        <div class="pages" style="margin-top:30px;">
+            <ul>
+                <li><a href="#"> << </a></li>
+                <li><a href="#"> < </a></li>
+                <li><a href="#" class="now_page"> 1 </a></li>
+                <li><a href="#"> 2 </a></li>
+                <li><a href="#"> 3 </a></li>
+                <li><a href="#"> 4 </a></li>
+                <li><a href="#"> 5 </a></li>
+                <li><a href="#"> ...... </a></li>
+                <li><a href="#"> 35 </a></li>
+                <li><a href="#"> 36 </a></li>
+                <li><a href="#"> > </a></li>
+                <li><a href="#"> >> </a></li>
+                <li class="info">第<input type="text" placeholder="1" class="textarea">页</li>
+                <li class="info">共36页</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>copyright © 2019 Art Store. All rights reserved</p>
+        </div>
+    </footer>
+
     <script type="text/javascript" src="../js/login.js"></script>
     <script type="text/javascript" src="../js/register.js"></script>
-    <script type="text/javascript" src="../js/show.js"></script>
     <script type="text/javascript" src="../js/search.js"></script>
 </html>

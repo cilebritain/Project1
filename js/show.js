@@ -40,3 +40,7 @@ window.onload=function(){
         img.style.top=-percentY*(img.offsetHeight-div2.offsetHeight)+'px';
     };
 }
+
+function add_shoppingcart(){
+    alert("添加购物车成功！");
+}
