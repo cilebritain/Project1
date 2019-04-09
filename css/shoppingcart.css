@@ -103,6 +103,187 @@ header{
 
 /*主体部分*/
 
+h1{
+    font-size: 40px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.name{
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.author{
+    font-size: 30px;
+    font-family: Lucida Handwriting,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.option{
+    display: inline-block;
+}
+
+section{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+#part1{
+    width: 90%;
+    background-color: wheat;
+    border: 1px solid skyblue;
+}
+
+#part1 h2{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+}
+
+#goods1_bef{
+    margin-top: 30px;
+    width: 90%;
+    background-color: gainsboro;
+}
+
+#goods1_bef img{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#goods2_bef{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    background-color: gainsboro;
+}
+
+#goods2_bef img{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section table tbody td[rowspan]{
+    width: 15%;
+}
+
+section table tbody td div{
+    display: inline-block;
+    font-size: 30px;
+    text-shadow: 2px 1px red;
+}
+
+section table tbody td button{
+    margin-left: 300px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: gray;
+    border-radius: 20px;
+    border: 2px solid red;
+}
+
+.pages{
+    width: 900px;
+    height: 20px;
+    margin: 10px auto 50px auto;
+    padding: 6px 0px;
+}
+
+.pages ul{
+    list-style: none;
+}
+
+.pages li{
+    display: inline-block;
+}
+
+.pages a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid skyblue;
+    padding: 8px 16px;
+}
+
+.pages a:visited{
+    color: black;
+}
+
+.pages a:hover{
+    background: skyblue;
+}
+
+.info{
+    color: #555555;
+    border: 1px solid #dddddd;
+    padding: 8px 16px;
+}
+
+.textarea{
+    width: 10px;
+}
+
+#pay{
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: skyblue;
+}
+
+#pay button{
+    margin-left: 300px;
+    margin-top: 5px;
+    height: 40px;
+    width: 150px;
+}
+
+#delete{
+    width: 90%;
+    background-color: wheat;
+    border: 1px solid skyblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#delete h2{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: 宋体,'Times New Roman', Times, serif;
+}
+
+#goods1_aft{
+    display: none;
+    margin-top: 20px;
+    width: 90%;
+    background-color: gainsboro;
+}
+
+#goods1_aft img{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#goods2_aft{
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    background-color: gainsboro;
+}
+
+#goods2_aft img{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
 /*尾部*/
 
 footer{

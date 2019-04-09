@@ -120,7 +120,7 @@
                     <li><a href="Artstore.html">首页</a></li>
                     <li><a href="SearchGoods.html">搜索</a></li>
                     <li><a href="GoodsDetail.html">商品详情</a></li>
-                    <li><a href="#">发布艺术品</a></li>
+                    <li><a href="Shoppingcart.html">购物车</a></li>
                 </ul>
             </nav>
         </div>
@@ -134,6 +134,33 @@
         <p>Adresss: songhuajiangroad 2500</p>
         <p>Balance: 10,000,000$</p>
         <button type="button" onclick="showRecharge()">Recharge</button>
+    </div>
+
+    <div id="recharge">
+        <table class="recharge_dialog">
+            <tr>
+                <td><h1>充值：</h1></td>
+                <td id="close"><input type="button" value="x" class="close" onclick="cancle_recharge()"></td>
+            </tr>
+            <tr class="main">
+                <td colspan="2">
+                    充值方式：
+                    <input type="radio" name="payway" checked>微信支付
+                    <input type="radio" name="payway">支付宝
+                    <input type="radio" name="payway">网银支付    
+                    <br>
+                    <input type="radio" name="ammount" id="enterM" value=""><input type="text" name="enter" id="sum" placeholder="输入整数金额"/>
+                    <input type="radio" name="ammount" value="5"/>50
+                    <input type="radio" name="ammount" value="10"/>10
+                    <input type="radio" name="ammount" value="20" checked/>20
+                    <input type="radio" name="ammount" value="50"/>50
+                    <input type="radio" name="ammount" value="100"/>100
+                    <br>
+                    <button type="button" onclick="recharge()">充值</button>
+                    <button type="button" onclick="cancle_recharge()">取消</button>    
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div class="Userinfo" id="beforelog_info">

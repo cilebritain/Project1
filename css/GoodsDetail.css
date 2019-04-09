@@ -188,6 +188,14 @@ section{
     box-shadow: 0 0 8px 2px wheat;
 }
 
+.content button a{
+    text-decoration: none;
+}
+
+.content button a:visited{
+    color: black;
+}
+
 /*侧边栏*/
 
 aside{

@@ -221,3 +221,55 @@ footer .copyright{
     color: white;   
     text-align: center;
 }
+
+/*充钱*/
+
+#recharge{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 101;
+}
+
+.recharge_dialog{
+    width: 40%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.recharge_dialog h1{
+    font-size: 35px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.main{
+    height: 300px;
+    line-height: 50px;
+}
+
+#close{
+    width: 25px;
+}
+
+.recharge_dialog button{
+    margin-left: 100px;
+    text-align: center;
+    color: white;
+    background-color: #87CEFA;
+    width: 100px;
+    height: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.recharge_dialog button:hover{
+    background-color: skyblue;
+}
+
+#recharge .close{ 
+    float: right;
+    margin-right: 20px;
+}
+
