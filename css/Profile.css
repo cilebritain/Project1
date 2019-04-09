@@ -49,6 +49,10 @@ header{
     color: white;
 }
 
+.head_option a:hover{
+    background-color: wheat;
+}
+
 #logo_slogan1{
     display: none;
 }

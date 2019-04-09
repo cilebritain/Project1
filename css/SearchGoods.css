@@ -49,6 +49,11 @@ header{
     color: white;
 }
 
+.head_option a:hover{
+    background-color: wheat;
+}
+
+
 .search{
     float: right;
     margin-top: 30px;
